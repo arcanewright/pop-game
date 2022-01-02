@@ -1,0 +1,13 @@
+{
+  "name": "pop-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ArcaneWright <77860571+arcanewright@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "dependencies": {}
+}
