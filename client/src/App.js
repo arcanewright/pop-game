@@ -5,7 +5,6 @@ import './App.css';
 
 const socket = io("http://localhost:3001");
 
-
 const App = () => {
   const [userID, setUserID] = useState(window.localStorage.getItem("userID"));
   const [color, setColor] = useState("black")
@@ -60,9 +59,7 @@ const Room = ({}) => {
 const StartScreen = ({roomCode, setRoomCode}) => {
 
   const [inputRoomCode, setInputRoomCode] = useState("");
-  const [invalidCode, setInvalidCode] = useState(false)
-
-  const codeValidation = RegExp("")
+  const [invalidCode, setInvalidCode] = useState(false);
 
   const validateCode = (code) => {
     if (code) {
@@ -74,7 +71,7 @@ const StartScreen = ({roomCode, setRoomCode}) => {
     <h1>Pop Game Site</h1>
     <div>
       <h2>Room</h2>
-      <input type="text" value={roomCode} style={{color: invalidCode ? "red" : "black"}}onChange={(e) => {validateCode(e.target.value); setInputRoomCode(e)}}></input>
+      <input type="text" value={roomCode} style={{color: invalidCode ? "red" : "black"}} onChange={(e) => {validateCode(e.target.value); setInputRoomCode(e)}}></input>
     </div>
     <div>
       <button>Join Game</button>
